@@ -1,3 +1,3 @@
 function getQuote(){
-	location.href="www.google.com";
+	 location.replace("http://localhost:9999/dynamic-api_client/quote");
 }

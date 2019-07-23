@@ -18,7 +18,7 @@ public class ServletOne extends HttpServlet {
       PrintWriter out = response.getWriter();
       // Print an HTML page as the output of the query
       out.println("<html>");
-      out.println("<head><title>Query Response</title></head>");
+      out.println("<head><title>Generate Quote</title></head>");
       out.println("<body>");
 
       // try (
