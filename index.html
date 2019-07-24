@@ -8,14 +8,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="style/style.css">
 	<script src="script/script.js"></script>
-Try it Yourself »
-
+	Try it Yourself »
 </head>
 <body>
 	<div class="header_bgd">
-		<h1>Hello World</h1>
+		<h1>--------------</h1>
 	</div>
-
 	<div class="content">
 		<div class="menu">
 			<a href="https://hiscox-us-test.apigee.net/ez_quote/InsuranceSvcRs" target="_blank">Raw Data</a>
@@ -23,7 +21,6 @@ Try it Yourself »
 			<a href="#">Link 3</a>
 			<a href="#">Link 4</a>
 		</div>
-
 		<div class="main">
 			<h2>Need a Business Insurance? </h2>
 			<form action="">
@@ -37,41 +34,35 @@ Try it Yourself »
 						<option value="CA">Carlifornia</option>
 						<option value="FL">Florida</option>
 						<option value="null" selected>Select</option>
-
-
 					</select>
 					<h4>Category of Business</h4>
-					<select name="state" id="state">
+					<select name="cob" id="cob">
 						<option value="handy_person">Handy Person</option>
 						<option value="account">Accounting</option>
 						<option value=accup>Accupunture Services</option>
 						<option value="advert">Advertising</option>
 						<option value="app_dev">Application Development</option>
 						<option value="null" selected>Select</option>
-
 					</select>
-
 					<h4>Product</h4>
-					<select name="state" id="state">
+					<select name="product" id="product">
 						<option value="GL">General Liability</option>
 						<option value="PL">Professional Liability</option>
 						<option value="BOP">Business Owner Policy</option>
 						<option value="null" selected>Select</option>
 						
-
-					</select>
+					</select><br><br>
+					<button onclick="getQuote()" id="quoteBtn">Get A Quote</button>
 				</fieldset>
 				
 			</form>
-			<button onclick="getQuote()" id="quoteBtn">Get A Quote</button>
+			
 		</div>
-
 		<div class="right">
 			<h2>About</h2>
 			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
 		</div>
 	</div>
-
 	<div style="background-color:#e5e5e5;text-align:center;padding:10px;margin-top:7px;">© copyright w3schools.com</div>
 </body>
 </html>
