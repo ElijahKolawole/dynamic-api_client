@@ -27,16 +27,18 @@
 		</div>
 		<div class="main">
 			<h2>Need a Business Insurance? </h2>
-			<form action="quote">
+			<form action="" method="get" id="form">
 				<fieldset>
 					<legend>Quote in seconds</legend>
 					<h4>State</h4>
-					<select name="state" id="state">
-						<option value="GA">Georgia</option>
-						<option value="TX">Texas</option>
-						<option value="NY">New York</option>
-						<option value="CA">Carlifornia</option>
-						<option value="FL">Florida</option>
+					<select name="state" id="state" onchange=' retainValue(); return false;'>
+						<option value="Georgia">Georgia</option>
+						
+
+						<option value="Texas">Texas</option>
+						<option value="New York">New York</option>
+						<option value="California">Carlifornia</option>
+						<option value="Florida">Florida</option>
 						<option value="null" selected>Select</option>
 					</select>
 					<h4>Category of Business</h4>
@@ -56,11 +58,24 @@
 						<option value="null" selected>Select</option>
 						
 					</select><br><br>
-					<button onclick="getQuote()" id="quoteBtn">Get A Quote</button>
+					
+
+					<button type="submit" value="Submit" onclick='printFormContents(this.form);return false;' id="quoteBtn">Get A Quote</button>
 				</fieldset>
 				
 			</form>
-								
+					<hr />	
+					<h5>Review Your Selection Below</h5>
+					<p id="output">
+						
+					</p>	
+					<script>
+function myFunction() {
+  var x = document.getElementById("form").elements[0].value;
+  document.getElementById("state").innerHTML = x;
+}
+</script>
+	
 
 		</div>
 		<div class="right">
