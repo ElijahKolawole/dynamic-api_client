@@ -7,8 +7,9 @@
 	<meta name="author" content="Adefemi K, API Team">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="style/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="script/script.js"></script>
-	Try it Yourself »
+	
 </head>
 <body>
 	<div class="header_bgd">
@@ -16,14 +17,17 @@
 	</div>
 	<div class="content">
 		<div class="menu">
+			
+			<a href="javascript:void(0)" id="purpose" data-src='http://placehold.it/100x100' onclick="toggleImage('purpose')">Purpose</a>
+			
+			<a href="javascript:void(0)" id="arch" data-src='image/architecture.JPG' onclick="toggleImage('arch')">Architecture</a>
+			<a href="javascript:void(0)" id="flow" data-src='image/flow.JPG' onclick="toggleImage('flow')">System Flow</a>
+			<a href="javascript:void(0)" id='tool' data-src='http://placehold.it/100x100' onclick="toggleImage('tool')">Tools used</a>
 			<a href="https://hiscox-us-test.apigee.net/ez_quote/InsuranceSvcRs" target="_blank">Raw Data</a>
-			<a href="#">Link 2</a>
-			<a href="#">Link 3</a>
-			<a href="#">Link 4</a>
 		</div>
 		<div class="main">
 			<h2>Need a Business Insurance? </h2>
-			<form action="">
+			<form action="quote">
 				<fieldset>
 					<legend>Quote in seconds</legend>
 					<h4>State</h4>
@@ -56,13 +60,14 @@
 				</fieldset>
 				
 			</form>
-			
+								
+
 		</div>
 		<div class="right">
 			<h2>About</h2>
-			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+			<p>Dynamic api allows full functional partner's portal to be created in minimal timeframe with no hard coded data. Question and answers sets are dynmaically fetched based on the initial selection of state, cob, and product. </p>
 		</div>
 	</div>
-	<div style="background-color:#e5e5e5;text-align:center;padding:10px;margin-top:7px;">© copyright w3schools.com</div>
+	<div style="background-color:#e5e5e5;text-align:center;padding:10px;margin-top:7px;"> &copy; copyright api_team 2019</div>
 </body>
 </html>
