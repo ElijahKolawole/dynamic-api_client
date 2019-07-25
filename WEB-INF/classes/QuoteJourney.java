@@ -81,7 +81,7 @@ public class QuoteJourney extends HttpServlet {
                      out.println("<div class='content'>");
                         out.println("<div class='main'>");
 
-                        out.println("<iframe class='quote_main' src='https://www.ggc.edu'>");
+                        out.println("<iframe id='quote_main' src='https://www.ggc.edu' frameborder='1' border='0' cellspacing='0' style='border-style: none;; ' >");
 
                         out.println("<p>Your browser does not support iframes.</p>");
                         out.println("</iframe>");
@@ -89,7 +89,7 @@ public class QuoteJourney extends HttpServlet {
                         out.println("</div>");
                         out.println("</div>");
 
-                        out.println("<div style='background-color:#e5e5e5;text-align:center;padding:10px;margin-top:7px;'> &copy; copyright api_team 2019</div>");
+                        out.println("<div id='footer' > &copy; copyright api_team 2019</div>");
 
                         out.println("</body></html>");
                         out.close();

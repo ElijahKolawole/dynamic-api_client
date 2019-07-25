@@ -6,6 +6,8 @@ body{
   font-family: HelveticaNeueLTStd-Lt,sans-serif;
 /*  color:#aaaaaa;
 */  color: #5f5f5f;
+
+
 }
 .header_bgd{
    background-color:#e5e5e5;
@@ -37,10 +39,10 @@ body{
   padding:0 20px;
 }
 
-.quote_main {
+#quote_main {
   
-  width:80%;
-  padding:0 20px;
+  width:100%;
+  padding:15px;
   margin: auto;
   align: center;
   border: 0.5ps dashed grey;
@@ -59,13 +61,6 @@ body{
   
 }
 
-#hero-image {
-    position: relative;
-    width: 600px;
-    height: 400px;
-    overflow: hidden;
-    background: red;
-}
 
  
 @media only screen and (max-width:620px) {
@@ -73,4 +68,16 @@ body{
   .menu, .main, .right {
     width:100%;
   }
+}
+
+#footer{
+  background-color:#e5e5e5;
+  text-align:center;
+  padding:10px;
+  margin-top:7px;
+  position: absolute
+  bottom: 0px;
+ 
+
+
 }
