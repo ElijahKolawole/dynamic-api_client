@@ -42,11 +42,13 @@ body{
 #quote_main {
   
   width:100%;
-  padding:15px;
+  height: 700px;
   margin: auto;
   align: center;
-  border: 0.5ps dashed grey;
-}
+/*  border: 0.5px dashed grey;
+*/}
+
+
 .right {
   background-color:#e5e5e5;
   float:left;
@@ -80,4 +82,9 @@ body{
  
 
 
+}
+
+#nextBtn{
+  float: right;
+  margin-right: 4px;
 }

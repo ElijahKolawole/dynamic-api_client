@@ -7,6 +7,8 @@ import javax.servlet.annotation.*;
 
 @WebServlet("/quote")   // Configure the request URL for this servlet (Tomcat 7/Servlet 3.0 upwards)
 public class QuoteJourney extends HttpServlet {
+   static String currURL = "/quote";
+   static String newURL = "/about";
 
 // The doGet() runs once per HTTP GET request to this servlet.
    @Override
@@ -79,9 +81,9 @@ public class QuoteJourney extends HttpServlet {
                         out.println("<h1>--------------</h1>");
                      out.println("</div>");
                      out.println("<div class='content'>");
-                        out.println("<div class='main'>");
+                        out.println("<div class='main' id='quote_main'>");
 
-                        out.println("<iframe id='quote_main' src='https://www.ggc.edu' frameborder='1' border='0' cellspacing='0' style='border-style: none;; ' >");
+                        out.println("<iframe id='quote_main' src='http://localhost:9999/dynamic-api_client/about' scrolling='no' frameborder='0' border='0' cellspacing='0' style='border-style: none; width:100%; ' >");
 
                         out.println("<p>Your browser does not support iframes.</p>");
                         out.println("</iframe>");
