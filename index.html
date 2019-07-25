@@ -17,13 +17,22 @@
 	</div>
 	<div class="content">
 		<div class="menu">
+
 			
-			<a href="javascript:void(0)" id="purpose" data-src='http://placehold.it/100x100' onclick="toggleImage('purpose')">Purpose</a>
 			
-			<a href="javascript:void(0)" id="arch" data-src='image/architecture.JPG' onclick="toggleImage('arch')">Architecture</a>
-			<a href="javascript:void(0)" id="flow" data-src='image/flow.JPG' onclick="toggleImage('flow')">System Flow</a>
-			<a href="javascript:void(0)" id='tool' data-src='http://placehold.it/100x100' onclick="toggleImage('tool')">Tools used</a>
+
+
+			<a href="javascript:void(0)"   data-src='http://placehold.it/100x100' onclick="toggle_visibility('purpose');">Purpose</a>
+			<div id="purpose" class="foo">This is foo</div>
+			
+			<a href="javascript:void(0)"  data-src='image/architecture.JPG' onclick="toggle_visibility('arch');">Architecture</a>
+			<div id="arch" class="foo"><img src="image/architecture.jpg" alt=""></div>
+			<a href="javascript:void(0)"  onclick="toggle_visibility('flow');">System Flow</a>
+			<div id="flow" class="foo"><img src="image/flow.JPG" alt=""></div>
+			<a href="javascript:void(0)"  onclick="toggle_visibility('tool');">Tools used</a>
+			<div id="tool" class="foo">This is foo</div>
 			<a href="https://hiscox-us-test.apigee.net/ez_quote/InsuranceSvcRs" target="_blank">Raw Data</a>
+			<div id="foo" class="foo">This is foo</div>
 		</div>
 		<div class="main">
 			<h2>Need a Business Insurance? </h2>
@@ -64,18 +73,18 @@
 				</fieldset>
 				
 			</form>
-					<hr />	
-					<h5>Review Your Selection Below</h5>
-					<p id="output">
-						
-					</p>	
-					<script>
-function myFunction() {
-  var x = document.getElementById("form").elements[0].value;
-  document.getElementById("state").innerHTML = x;
-}
-</script>
-	
+			<hr />	
+			<h5>Review Your Selection Below</h5>
+			<p id="output">
+
+			</p>	
+			<script>
+				function myFunction() {
+					var x = document.getElementById("form").elements[0].value;
+					document.getElementById("state").innerHTML = x;
+				}
+			</script>
+
 
 		</div>
 		<div class="right">
