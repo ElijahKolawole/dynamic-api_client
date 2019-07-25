@@ -23,6 +23,7 @@ body{
   text-align:center;
 }
 .menu a {
+  text-decoration: none;
   background-color:#e5e5e5;
   padding:8px;
   margin-top:7px;
@@ -35,6 +36,15 @@ body{
   width:50%;
   padding:0 20px;
 }
+
+.quote_main {
+  
+  width:80%;
+  padding:0 20px;
+  margin: auto;
+  align: center;
+  border: 0.5ps dashed grey;
+}
 .right {
   background-color:#e5e5e5;
   float:left;
@@ -46,9 +56,18 @@ body{
 
 .foo{
   display: none;
-  width: 100px;
+  
 }
 
+#hero-image {
+    position: relative;
+    width: 600px;
+    height: 400px;
+    overflow: hidden;
+    background: red;
+}
+
+ 
 @media only screen and (max-width:620px) {
   /* For mobile phones: */
   .menu, .main, .right {

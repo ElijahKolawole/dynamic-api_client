@@ -26,9 +26,9 @@
 			<div id="purpose" class="foo">This is foo</div>
 			
 			<a href="javascript:void(0)"  data-src='image/architecture.JPG' onclick="toggle_visibility('arch');">Architecture</a>
-			<div id="arch" class="foo"><img src="image/architecture.jpg" alt=""></div>
-			<a href="javascript:void(0)"  onclick="toggle_visibility('flow');">System Flow</a>
-			<div id="flow" class="foo"><img src="image/flow.JPG" alt=""></div>
+<!-- 			<div id="arch" class="foo"><img src="image/architecture.JPG" alt=""></div>
+ -->			<a href="javascript:void(0)"  onclick="toggle_visibility('flow');">System Flow</a>
+			<!-- <div class="foo"><img src="image/flow.JPG" alt=""></div> -->
 			<a href="javascript:void(0)"  onclick="toggle_visibility('tool');">Tools used</a>
 			<div id="tool" class="foo">This is foo</div>
 			<a href="https://hiscox-us-test.apigee.net/ez_quote/InsuranceSvcRs" target="_blank">Raw Data</a>
@@ -36,7 +36,7 @@
 		</div>
 		<div class="main">
 			<h2>Need a Business Insurance? </h2>
-			<form action="" method="get" id="form">
+			<form action="/dynamic-api_client/quote" method="get" id="form">
 				<fieldset>
 					<legend><h3>Dynamic Quote in seconds</h3></legend>
 					<h4>1. State</h4>
@@ -84,6 +84,10 @@
 					document.getElementById("state").innerHTML = x;
 				}
 			</script>
+			<hr />
+			<div class="foo">
+				<img id="flow" src="image/flow.JPG" alt="high level system flow">
+			</div>
 
 
 		</div>

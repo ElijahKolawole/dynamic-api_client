@@ -42,6 +42,7 @@ function printFormContents(someForm) {
         }
     }
  document.getElementById('output').innerHTML = out;
+ callservlet();
 }
 
 function retainValue() {
@@ -62,3 +63,7 @@ function toggle_visibility(id) {
        else
           e.style.display = 'block';
           }
+ function callservlet() {
+  //do your processing.
+  document.getElementsByName('getdata')[0].submit();
+}
