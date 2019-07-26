@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-  
   <xsl:template match="/">
     <html>
       <head>
@@ -13,29 +12,49 @@
           <tr class="t_head">
             <th>Question</th>
             <th>Description</th>
-            <th colspan="5">Response</th>
+            <th colspan="11">Response</th>
           </tr>
           <tr>
-            <td colspan="2"></td>
+            <th colspan="2"></th>
             <th>ResponseType</th>
             <th>Responsesubtype</th>
             <th>minimumvalue</th>
             <th>maximumvalue</th>
             <th>datatype</th>
+            <th colspan="6">Responsevalues</th>
           </tr>
-          <xsl:for-each select="QuestionList/Questions"> 
-            <tr>
-              <td><xsl:value-of select="Question"/></td>
-              <td><xsl:value-of select="Description"/></td>
-              <td><xsl:value-of select="Response/ResponseType"/></td>
-              <td><xsl:value-of select="Response/Responsesubtype"/></td>
-              <td><xsl:value-of select="Response/minimumvalue"/></td>
-              <td><xsl:value-of select="Response/maximumvalue"/></td>
-              <td><xsl:value-of select="Response/datatype"/></td>
-            </tr>
-          </xsl:for-each> 
-        </table>
-      </body>
-    </html>
-  </xsl:template>
+<!--  <tr>
+<th colspan="7"></th>
+<th colspan="5">Value</th>
+</tr> -->
+<tr>
+  <th colspan="7"></th>
+  <th>A</th>
+  <th>B</th>
+  <th>C</th>
+  <th>D</th>
+  <th>E</th>
+  <th>F</th>
+</tr>
+<xsl:for-each select="QuestionList/Questions"> 
+  <tr>
+    <td><xsl:value-of select="Question"/></td>
+    <td><xsl:value-of select="Description"/></td>
+    <td><xsl:value-of select="Response/ResponseType"/></td>
+    <td><xsl:value-of select="Response/Responsesubtype"/></td>
+    <td><xsl:value-of select="Response/minimumvalue"/></td>
+    <td><xsl:value-of select="Response/maximumvalue"/></td>
+    <td><xsl:value-of select="Response/datatype"/></td>           
+    <td><xsl:value-of select="Response/Responsevalues[1]"/></td>
+    <td><xsl:value-of select="Response/Responsevalues[2]"/></td>
+    <td><xsl:value-of select="Response/Responsevalues[3]"/></td>
+    <td><xsl:value-of select="Response/Responsevalues[4]"/></td>
+    <td><xsl:value-of select="Response/Responsevalues[5]"/></td>
+    <td><xsl:value-of select="Response/Responsevalues[6]"/></td>
+  </tr>
+</xsl:for-each> 
+</table>
+</body>
+</html>
+</xsl:template>
 </xsl:stylesheet>
