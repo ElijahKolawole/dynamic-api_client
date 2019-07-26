@@ -31,7 +31,7 @@ public class AboutServlet extends HttpServlet {
       out.println("</head>");
       out.println("<body>");
       out.println("<div class='header_bgd'>");
-// out.println("<h1>--------------</h1>");
+out.println("<h1>--------------</h1>");
       out.println("</div>");
       out.println("<div class='content'>");
       out.println("<div id='main'>");
