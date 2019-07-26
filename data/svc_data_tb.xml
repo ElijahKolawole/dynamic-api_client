@@ -1,270 +1,174 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="svc_data_tb.xsl"?>
-
-
-<InsuranceSvcRs>
-	<Partner/>
-	<State/>
-	<ClassOfBusinessCd/>
-	<PolicyType>CGL</PolicyType>
-	<Questions>
-		<Question>
-			<DataItem>OperatedFromHome</DataItem>
-			<XPath>
-				/InsuranceSvcRq/QuoteRq/ProductQuoteRqs/GeneralLiabilityQuoteRq/RatingInfo/OperatedFromHome
-			</XPath>
-			<Question>
-				<Text>Is your business operated out of your home?</Text>
-			</Question>
-			<Response>
-				<ResponseType>radio</ResponseType>
-				<MinimumValue>N/A</MinimumValue>
-				<MaximumValue>N/A</MaximumValue>
-				<EnumeratedValues>
-					<Value>Yes</Value>
-					<Value>No</Value>
-				</EnumeratedValues>
-			</Response>
-		</Question>
-		<Question>
-			<DataItem>NumOfEmployees</DataItem>
-			<XPath>
-				/InsuranceSvcRq/QuoteRq/ProductQuoteRqs/GeneralLiabilityQuoteRq/RatingInfo/NumOfEmployees
-			</XPath>
-			<Question>
-				<Text>
-					Including yourself, how many full-time, part-time, and temporary employees does your business have? (Do not include subcontractors.)
-				</Text>
-			</Question>
-			<Response>
-				<ResponseType>integer</ResponseType>
-				<MinimumValue>1</MinimumValue>
-				<MaximumValue>999</MaximumValue>
-				<EnumeratedValues/>
-			</Response>
-		</Question>
-		<Question>
-			<DataItem>AdditionalLocation</DataItem>
-			<XPath>
-				/InsuranceSvcRq/QuoteRq/ProductQuoteRqs/GeneralLiabilityQuoteRq/RatingInfo/AdditionalLocation
-			</XPath>
-			<Question>
-				<Text>
-					Other than the business address provided above, how many additional locations does your business own or rent?
-				</Text>
-			</Question>
-			<Response>
-				<ResponseType>radio</ResponseType>
-				<MinimumValue>N/A</MinimumValue>
-				<MaximumValue>N/A</MaximumValue>
-				<EnumeratedValues>
-					<Value>0</Value>
-					<Value>1</Value>
-					<Value>2</Value>
-					<Value>3</Value>
-					<Value>4</Value>
-					<Value>5+</Value>
-				</EnumeratedValues>
-			</Response>
-		</Question>
-		<Question>
-			<DataItem>BusinessOwnershipStructure</DataItem>
-			<XPath>
-				/InsuranceSvcRq/QuoteRq/ProductQuoteRqs/GeneralLiabilityQuoteRq/RatingInfo/BusinessOwnershipStructure
-			</XPath>
-			<Question>
-				<Text>
-					What best describes your business’s ownership structure?
-				</Text>
-			</Question>
-			<Response>
-				<ResponseType>radio</ResponseType>
-				<MinimumValue>N/A</MinimumValue>
-				<MaximumValue>N/A</MaximumValue>
-				<EnumeratedValues>
-					<Value>Individual/sole proprietor</Value>
-					<Value>Joint venture</Value>
-					<Value>Limited liability company</Value>
-					<Value>Partnership</Value>
-					<Value>Trust</Value>
-					<Value>
-						Corporation or other organization (other than the above)
-					</Value>
-				</EnumeratedValues>
-			</Response>
-		</Question>
-		<Question>
-			<DataItem>CoverageStartDate</DataItem>
-			<XPath>
-				/InsuranceSvcRq/QuoteRq/ProductQuoteRqs/GeneralLiabilityQuoteRq/RatingInfo/CoverageStartDate
-			</XPath>
-			<Question>
-				<Text>
-					If you purchase a policy, when would you like your coverage to start?
-				</Text>
-			</Question>
-			<Response>
-				<ResponseType>date</ResponseType>
-				<MinimumValue>today</MinimumValue>
-				<MaximumValue>N/A</MaximumValue>
-				<EnumeratedValues/>
-			</Response>
-		</Question>
-		<Question>
-			<DataItem>EstmtdAnnualGrossSales</DataItem>
-			<XPath>
-				/InsuranceSvcRq/QuoteRq/ProductQuoteRqs/GeneralLiabilityQuoteRq/RatingInfo/EstmtdAnnualGrossSales
-			</XPath>
-			<Question>
-				<Text>
-					What are your business's estimated gross sales during the next 12 months?
-				</Text>
-				<SubText>
-					Note: If your business is primarily compensated by commissions (like a real estate agent or travel agent), estimate the total value of your commissions, not the total value of the sales which your commissions are based on. Your best estimate is fine.
-				</SubText>
-			</Question>
-			<Response>
-				<ResponseType>integer</ResponseType>
-				<MinimumValue>0</MinimumValue>
-				<MaximumValue>99999999999999</MaximumValue>
-				<EnumeratedValues/>
-			</Response>
-		</Question>
-		<Question>
-			<DataItem>EstmtdPayrollSCContractors</DataItem>
-			<XPath>
-				/InsuranceSvcRq/QuoteRq/ProductQuoteRqs/GeneralLiabilityQuoteRq/RatingInfo/EstmtdPayrollSCContractors
-			</XPath>
-			<Question>
-				<Text>
-					If your business hires subcontractors to do work on your behalf, how much do you expect to pay them during the next 12 months (enter $0 if you do not hire subcontractors)?
-				</Text>
-			</Question>
-			<Response>
-				<ResponseType>integer</ResponseType>
-				<MinimumValue>0</MinimumValue>
-				<MaximumValue>99999999999999</MaximumValue>
-				<EnumeratedValues/>
-			</Response>
-		</Question>
-		<Question>
-			<DataItem>EstmtdPayrollSC</DataItem>
-			<XPath>
-				/InsuranceSvcRq/QuoteRq/ProductQuoteRqs/GeneralLiabilityQuoteRq/RatingInfo/EstmtdPayrollSC
-			</XPath>
-			<Question>
-				<Text>
-					What's your company's estimated payroll for the next 12 months? Include you and any full-time, part-time, temporary employees, and/or subcontractors.
-				</Text>
-			</Question>
-			<Response>
-				<ResponseType>integer</ResponseType>
-				<MinimumValue>0</MinimumValue>
-				<MaximumValue>99999999999999</MaximumValue>
-				<EnumeratedValues/>
-			</Response>
-		</Question>
-		<Question>
-			<DataItem>ForbiddenProjectsSmallContractors</DataItem>
-			<XPath>
-				/InsuranceSvcRq/QuoteRq/ProductQuoteRqs/GeneralLiabilityQuoteRq/RatingInfo/ForbiddenProjectsSmallContractors
-			</XPath>
-			<Question>
-				<Text>
-					Do you or any of your subcontractors provide any of the following services or work on any projects involving the following materials or infrastructure? • Airports • Amusement rides, pools or playgrounds • Asbestos, lead, or mold evaluation or abatement • Bridges, dams, harbors, mines, piers or tunnels • Blasting or demolition • Crane operation • Emergency systems • Fire suppression • Foundation, sheeting or retaining walls • Hazardous material or waste removal • Hydraulic fracturing, hydrofracturing, or fracking • Landfills • Oil, gas or wells • Process piping • Roofing • Scaffolding operation • Underground storage tanks or utilities • Any other similarly hazardous projects or materials
-				</Text>
-			</Question>
-			<Response>
-				<ResponseType>radio</ResponseType>
-				<MinimumValue>N/A</MinimumValue>
-				<MaximumValue>N/A</MaximumValue>
-				<EnumeratedValues>
-					<Value>Yes</Value>
-					<Value>No</Value>
-				</EnumeratedValues>
-			</Response>
-		</Question>
-		<Question>
-			<DataItem>HireNonOwnVehclUse</DataItem>
-			<XPath>
-				/InsuranceSvcRq/QuoteRq/ProductQuoteRqs/GeneralLiabilityQuoteRq/RatingInfo/HireNonOwnVehclUse
-			</XPath>
-			<Question>
-				<Text>
-					Does your business use rented or non-owned vehicles (e.g. an employee's car) for business purposes?
-				</Text>
-			</Question>
-			<Response>
-				<ResponseType>radio</ResponseType>
-				<MinimumValue>N/A</MinimumValue>
-				<MaximumValue>N/A</MaximumValue>
-				<EnumeratedValues>
-					<Value>Yes</Value>
-					<Value>No</Value>
-				</EnumeratedValues>
-			</Response>
-		</Question>
-		<Question>
-			<DataItem>AgreeDisagreeToStatements</DataItem>
-			<XPath>
-				/InsuranceSvcRq/QuoteRq/ProductQuoteRqs/GeneralLiabilityQuoteRq/RatingInfo/AgreeDisagreeToStatements
-			</XPath>
-			<Question>
-				<Text>
-					I have read and agreed to the important statements on the previous screen?
-				</Text>
-			</Question>
-			<Response>
-				<ResponseType>radio</ResponseType>
-				<MinimumValue>N/A</MinimumValue>
-				<MaximumValue>N/A</MaximumValue>
-				<EnumeratedValues>
-					<Value>I have read and agree with these statements</Value>
-					<Value>
-						I have read and disagree with one or more of these statements
-					</Value>
-				</EnumeratedValues>
-			</Response>
-		</Question>
-		<Question>
-			<DataItem>EmailConsent</DataItem>
-			<XPath>
-				/InsuranceSvcRq/QuoteRq/ProductQuoteRqs/GeneralLiabilityQuoteRq/RatingInfo/EmailConsent
-			</XPath>
-			<Question>
-				<Text>
-					I agree to accept delivery of the insurance policy and related documents via email to the address provided to Hiscox and agree to consent in electronic transactions.
-				</Text>
-			</Question>
-			<Response>
-				<ResponseType>radio</ResponseType>
-				<MinimumValue>N/A</MinimumValue>
-				<MaximumValue>N/A</MaximumValue>
-				<EnumeratedValues>
-					<Value>Yes</Value>
-					<Value>No</Value>
-				</EnumeratedValues>
-			</Response>
-		</Question>
-		<Question>
-			<DataItem>InformationConfirmAgreement</DataItem>
-			<XPath>
-				/InsuranceSvcRq/QuoteRq/ProductQuoteRqs/GeneralLiabilityQuoteRq/RatingInfo/InformationConfirmAgreement
-			</XPath>
-			<Question>
-				<Text>
-					I have read the information above and confirm it is correct. By checking this box and providing the premium payment I agree that I am entering into a binding agreement with Hiscox Insurance Company Inc.
-				</Text>
-			</Question>
-			<Response>
-				<ResponseType>radio</ResponseType>
-				<MinimumValue>N/A</MinimumValue>
-				<MaximumValue>N/A</MaximumValue>
-				<EnumeratedValues>
-					<Value>Yes</Value>
-					<Value>No</Value>
-				</EnumeratedValues>
-			</Response>
-		</Question>
-	</Questions>
-</InsuranceSvcRs>
+<QuestionList>
+            <Questions>
+                        <Question>ApplicantFirstName</Question>
+                        <Description>First Name</Description>
+                        <Response>
+                                    <ResponseType>Text</ResponseType>
+                                    <Responsesubtype>N/A</Responsesubtype>
+                                    <minimumvalue>N/A</minimumvalue>
+                                    <maximumvalue>N/A</maximumvalue>
+                                    <datatype>varchar</datatype>
+                        </Response>
+            </Questions>
+            <Questions>
+                        <Question>ApplicantLastName</Question>
+                        <Description>Last Name</Description>
+                        <Response>
+                                    <ResponseType>Text</ResponseType>
+                                    <datatype>varchar</datatype>
+                        </Response>
+            </Questions>
+            <Questions>
+                        <Question>BusinessCity</Question>
+                        <Description>City Name</Description>
+                        <Response>
+                                    <ResponseType>Text</ResponseType>
+                                    <datatype>varchar</datatype>
+                        </Response>
+            </Questions>
+            <Questions>
+                        <Question>AdditionalLocation</Question>
+                        <Description>Additional locations other than primary location</Description>
+                        <Response>
+                                    <ResponseType>Dropdown</ResponseType>
+                        </Response>
+            </Questions>
+            <Questions>
+                        <Question>BusinessOwnershipStructure</Question>
+                        <Description>Business ownership structure</Description>
+                        <Response>
+                                    <ResponseType>Dropdown</ResponseType>
+                                    <Responsevalues>
+                                                <Value>Individual/Sole Proprietor</Value>
+                                    </Responsevalues>
+                                    <Responsevalues>
+                                                <Value>Joint Venture</Value>
+                                    </Responsevalues>
+                                    <Responsevalues>
+                                                <Value>Limited Liability Company</Value>
+                                    </Responsevalues>
+                                    <Responsevalues>
+                                                <Value>Partnership</Value>
+                                    </Responsevalues>
+                                    <Responsevalues>
+                                                <Value>Trust</Value>
+                                    </Responsevalues>
+                                    <Responsevalues>
+                                                <Value>Corporation or other Organization (other than the above)</Value>
+                                    </Responsevalues>
+                        </Response>
+            </Questions>
+            <Questions>
+                        <Question>CovgStartDate</Question>
+                        <Description>Coverage Start Date</Description>
+                        <Response>
+                                    <ResponseType>Date</ResponseType>
+                                    <minimumvalue>today</minimumvalue>
+                                    <Responsevalues/>
+                        </Response>
+            </Questions>
+            <Questions>
+                        <Question>Street</Question>
+                        <Description>Street Address</Description>
+                        <Response>
+                                    <ResponseType>Text</ResponseType>
+                                    <datatype>varchar</datatype>
+                        </Response>
+            </Questions>
+            <Questions>
+                        <Question>ZipCode</Question>
+                        <Description>Address zipcode</Description>
+                        <Response>
+                                    <ResponseType>Text</ResponseType>
+                                    <Responsesubtype>Zipcode5</Responsesubtype>
+                                    <datatype>varchar</datatype>
+                        </Response>
+            </Questions>
+            <Questions>
+                        <Question>AggregateLOI</Question>
+                        <Description>AggregateLimit</Description>
+                        <Response>
+                                    <ResponseType>Dropdown</ResponseType>
+                                    <Responsesubtype>Currency(USD)</Responsesubtype>
+                                    <datatype>numeric</datatype>
+                        </Response>
+            </Questions>
+            <Questions>
+                        <Question>Deductible</Question>
+                        <Description>Deductible amount</Description>
+                        <Response>
+                                    <ResponseType>Dropdown</ResponseType>
+                                    <Responsesubtype>Currency(USD)</Responsesubtype>
+                                    <datatype>numeric</datatype>
+                        </Response>
+            </Questions>
+            <Questions>
+                        <Question>EmailAddress</Question>
+                        <Description>Customer Email ID</Description>
+                        <Response>
+                                    <ResponseType>Text</ResponseType>
+                                    <Responsesubtype>Email</Responsesubtype>
+                                    <datatype>varchar</datatype>
+                        </Response>
+            </Questions>
+            <Questions>
+                        <Question>TelephoneNumber</Question>
+                        <Description>Customer Phone Number</Description>
+                        <Response>
+                                    <ResponseType>Text</ResponseType>
+                                    <Responsesubtype>Telephone-US</Responsesubtype>
+                                    <datatype>varchar</datatype>
+                        </Response>
+            </Questions>
+            <Questions>
+                        <Question>BusinessName</Question>
+                        <Description>Name of the Business</Description>
+                        <Response>
+                                    <ResponseType>Text</ResponseType>
+                        </Response>
+            </Questions>
+            <Questions>
+                        <Question>EstmtdAnnualGrossSales</Question>
+                        <Description>Estimated gross sales for next 12 months</Description>
+                        <Response>
+                                    <ResponseType>Text</ResponseType>
+                        </Response>
+            </Questions>
+            <Questions>
+                        <Question>EstmtdPayrollSC</Question>
+                        <Description>Estimated Payroll for Small Contractors</Description>
+                        <Response>
+                                    <ResponseType>Text</ResponseType>
+                        </Response>
+            </Questions>
+            <Questions>
+                        <Question>EstmtdPayrollSCContractors</Question>
+                        <Description>Estimated Payroll for Small Contractors</Description>
+                        <Response>
+                                    <ResponseType>Text</ResponseType>
+                        </Response>
+            </Questions>
+            <Questions>
+                        <Question>NumOfEmployees</Question>
+                        <Description>Total number of full-time, part-time, and temporary employees does your business have, including yourself</Description>
+                        <Response>
+                                    <ResponseType>Text</ResponseType>
+                        </Response>
+            </Questions>
+            <Questions>
+                        <Question>OperatedFromHome</Question>
+                        <Description>Is your business operated out of your home</Description>
+                        <Response>
+                                    <ResponseType>Radio</ResponseType>
+                        </Response>
+            </Questions>
+            <Questions>
+                        <Question>SCForbiddenProjects</Question>
+                        <Description>SCForbiddenProjects</Description>
+                        <Response>
+                                    <ResponseType>Radio</ResponseType>
+                        </Response>
+            </Questions>
+</QuestionList>
