@@ -166,7 +166,9 @@
 		</Question>
 		<Question>
 			<DataItem>ForbiddenProjectsSmallContractors</DataItem>
-			<XPath/>
+			<XPath>
+				/InsuranceSvcRq/QuoteRq/ProductQuoteRqs/GeneralLiabilityQuoteRq/RatingInfo/ForbiddenProjectsSmallContractors
+			</XPath>
 			<Question>
 				<Text>
 					Do you or any of your subcontractors provide any of the following services or work on any projects involving the following materials or infrastructure? • Airports • Amusement rides, pools or playgrounds • Asbestos, lead, or mold evaluation or abatement • Bridges, dams, harbors, mines, piers or tunnels • Blasting or demolition • Crane operation • Emergency systems • Fire suppression • Foundation, sheeting or retaining walls • Hazardous material or waste removal • Hydraulic fracturing, hydrofracturing, or fracking • Landfills • Oil, gas or wells • Process piping • Roofing • Scaffolding operation • Underground storage tanks or utilities • Any other similarly hazardous projects or materials
