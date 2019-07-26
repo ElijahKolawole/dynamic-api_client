@@ -34,7 +34,7 @@ public class PaymentServlet extends HttpServlet {
 // out.println("<h1>--------------</h1>");
       out.println("</div>");
       out.println("<div class='content'>");
-      out.println("<div class='main'>");
+      out.println("<div id='main'>");
       out.println("<h2>Payment Information </h2>");
       out.println("<form action='/dynamic-api_client/quote' method='get' id='form'>");
       out.println("<fieldset>");

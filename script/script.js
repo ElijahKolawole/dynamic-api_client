@@ -42,6 +42,7 @@ function getQuote(){
         }
     }
     document.getElementById('output').innerHTML = out;
+    alert(QuoteJourney.getCurrUrl());
     callservlet();
 }
 

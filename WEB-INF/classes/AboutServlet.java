@@ -34,11 +34,11 @@ public class AboutServlet extends HttpServlet {
 // out.println("<h1>--------------</h1>");
       out.println("</div>");
       out.println("<div class='content'>");
-      out.println("<div class='main'>");
-      out.println("<h2 style='text-align:center'>Tell us more About You </h2>");
+      out.println("<div id='main'>");
+      out.println("<h2>Tell us more About You </h2>");
       out.println("<form action='/dynamic-api_client/quote' method='get' id='form'>");
-      out.println("<fieldset >");
-      out.println("<legend><h3><i>--About You--</i></h3></legend>");
+      out.println("<fieldset>");
+      out.println("<legend ><h3><i>--About You--</i></h3></legend>");
 // <h4>1. State</h4>
 // <select name="state" id="state" onchange=' retainValue(); return false;'>
 //    <option value="Georgia">Georgia</option>

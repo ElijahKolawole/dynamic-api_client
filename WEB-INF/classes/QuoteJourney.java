@@ -9,7 +9,9 @@ import javax.servlet.annotation.*;
 public class QuoteJourney extends HttpServlet {
    static String currURL = "/quote";
    static String newURL = "/about";
-
+   public static String getCurrUrl(){
+      return currURL;
+   }
 // The doGet() runs once per HTTP GET request to this servlet.
    @Override
    public void doGet(HttpServletRequest request, HttpServletResponse response)
