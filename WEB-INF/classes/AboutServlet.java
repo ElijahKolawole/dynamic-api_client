@@ -4,7 +4,7 @@ import java.sql.*;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
-@WebServlet("/about")   // Configure the request URL for this servlet (Tomcat 7/Servlet 3.0 upwards)
+@WebServlet("/owner")   // Configure the request URL for this servlet (Tomcat 7/Servlet 3.0 upwards)
 public class AboutServlet extends HttpServlet {
 // The doGet() runs once per HTTP GET request to this servlet.
    @Override
@@ -31,7 +31,7 @@ public class AboutServlet extends HttpServlet {
       out.println("</head>");
       out.println("<body>");
       out.println("<div class='header_bgd'>");
-      out.println("<h1>--------------</h1>");
+      // out.println("<h1>--------------</h1>");
       out.println("</div>");
       out.println("<div class='content'>");
       out.println("<div id='main'>");
