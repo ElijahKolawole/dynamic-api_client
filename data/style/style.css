@@ -5,3 +5,6 @@ body{
 .t_head{
 	background-color: #9acd32;
 }
+span{
+	font-weight: small;
+}
