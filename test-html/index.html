@@ -1,0 +1,71 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+<meta charset="utf-8"> 
+<title>Retrieve data from server as XML using Ajax</title> 
+<meta name="description" content="HTML and JavaScript code of example of Retrieve data from server as XML using Ajax by w3resource"> 
+<!-- <link href="../includes/bootstrap.css" rel="stylesheet"> -->
+<style type="text/css">
+body {padding-top: 40px; padding-left: 25%}
+li {list-style: none; margin:5px 0 5px 0; color:#FF0000}
+</style>
+</head>
+<body>
+<p><button class="btn btn-primary" data-toggle="button" id="w3r_button" onclick="show_updates('data.xml')">Get recent updates</button></p>
+<div id="updates">
+</div>
+<script type="text/javascript">
+function show_updates(url)
+{
+var xhr;
+var output,w3r,w3,i;
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xhr=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xhr=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xhr.onreadystatechange=function()
+  {
+  if (xhr.readyState==4 && xhr.status==200)
+    {
+    output="<div class='well'>";
+    w3=xhr.responseXML.documentElement.getElementsByTagName("item");
+    for (i=0;i<w3.length;i++)
+      {
+      w3r=w3[i].getElementsByTagName("title");
+	  w3r1=w3[i].getElementsByTagName("link");
+        {
+        try
+          {
+		  output=output + "<p><a href=" + w3r1[0].firstChild.nodeValue + ">" + w3r[0].firstChild.nodeValue + "</a></p>";
+          }
+        catch (er)
+          {
+          output=output + "<p> </p>";
+          }
+        }
+    w3r=w3[i].getElementsByTagName("description");
+      {
+        try
+          {
+          output=output + "<p>" + w3r[0].firstChild.nodeValue + "</p><hr>";
+		 }
+        catch (er)
+          {
+          output=output + "<p> </p>";
+		}
+        }
+     }
+     output=output + "</div>";
+    document.getElementById('updates').innerHTML=output;
+    }
+  }
+xhr.open("GET",url,true);
+xhr.send();
+}
+</script>
+</body>
+</html>

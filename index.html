@@ -33,7 +33,7 @@
 		</div>
 		<div class="main">
 			<h2>Need a Business Insurance? </h2>
-			<form action="/dynamic-api_client/quote" method="get" id="form">
+			<form action="/dynamic-api_client/quote" method="get" id="quote_form_1">
 				<fieldset>
 					<legend><h3>Dynamic Quote in seconds</h3></legend>
 					<h4>1. State</h4>
@@ -63,8 +63,11 @@
 						
 					</select><br><br>
 					
+					     <button type='submit' form='quote_form_1' value='Submit'>Get A Quote</button>
 
-					<button type="submit" value="Submit" onclick='printFormContents(this.form);return false;' id="quoteBtn">Get A Quote</button>
+
+					
+					<!-- <button type="submit" value="Submit" onclick='printFormContents(this.form);return false;' id="quoteBtn">Get A Quote</button> -->
 				</fieldset>
 				
 			</form>
