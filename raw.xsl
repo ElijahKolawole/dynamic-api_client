@@ -22,15 +22,23 @@
                                 <xsl:value-of select="Description" />
                                 </td>
                                 <td>
-                                $<input type="number"  min="1" max="999999" step="any" />
+                                $<input type="number"  min="1" max="999999" step="any"  placeholder="500"  />
                                 </td>
                         </xsl:when>
+                        <xsl:when test="Response/ResponseType='Date'">
+                              <td>
+                              <xsl:value-of select="Description" />:
+                              </td>
+                              <td>
+                              <input type="date" />
+                              </td>
+                              </xsl:when>
                         <xsl:when test="Response/ResponseType='Text' and Response/Responsesubtype='Zipcode5'">
                           <td>
                             <xsl:value-of select="Description" />
                           </td>
                           <td>
-                            <input type='text' pattern='[0-9]{5}'/>
+                            <input type='text' pattern='[0-9]{5}' placeholder="50029"/>
                           </td>
                         </xsl:when>
                         <xsl:when test="Response/ResponseType='Dropdown' and Response/Responsevalues ">
@@ -50,7 +58,7 @@
                             <xsl:value-of select="Description" />
                           </td>
                           <td>
-                            <input type="tel"  pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" /> <span style="font-style:italic;"> Format: 123-450-6781</span>
+                            <input type="tel"  pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" placeholder="123-450-6781"/> <span style="font-style:italic;"  > Format: 123-450-6781</span>
                           </td>
                         </xsl:when>
                         <xsl:when test="Response/Responsesubtype='Email'">
@@ -58,7 +66,7 @@
                             <xsl:value-of select="Description" />
                           </td>
                           <td>
-                            <input type="email" />
+                            <input type="email" placeholder="b_owner@biz.com" />
                           </td>
                         </xsl:when>
                         
