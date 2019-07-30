@@ -38,7 +38,7 @@
                           <xsl:value-of select="Description" />
                         </td>
                         <td>
-                          $<input type="number" min="0.01" step="0.01" max="2500" value="25.67" />
+                          $<input type="number" />
                         </td>
                       </xsl:if>
 
@@ -62,6 +62,24 @@
                         </td>
                         <td>
                           <input type="email" />
+                        </td>
+                      </xsl:if>
+
+                       <!--  <xsl:if test="Response/Responsesubtype='Zipcode5'">
+                        <td>
+                          <xsl:value-of select="Description" />
+                        </td>
+                        <td>
+                          <input type='text' pattern='[0-9]{5}'/>
+                        </td>
+                      </xsl:if>
+ -->
+                        <xsl:if test="Response/Responsesubtype='Telephone-US'">
+                        <td>
+                          <xsl:value-of select="Description" />
+                        </td>
+                        <td>
+                          <input type="tel" />
                         </td>
                       </xsl:if>
 
