@@ -15,73 +15,77 @@
                         <table>
                             <tr>
                                 <td>What is your First Name:
-                        </td><td><input type="text"></td>
+                          </td><td><input type="text"></td>
                             </tr>
                             <tr>
                                 <td>Last Name:
-                        </td><td><input type="text"></td>
+                          </td><td><input type="text"></td>
                             </tr>
                             <tr>
                                 <td>City Name:
-                        </td><td><input type="text"></td>
+                          </td><td><input type="text"></td>
                             </tr>
                             <tr>
                                 <td>Additional locations other than primary location:
-                        </td><td><select><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select></td>
+                          </td><td><select><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5+">5+</option></select></td>
                             </tr>
                             <tr>
                                 <td>Business ownership structure:
-                        </td><td><select><option value="Individual/Sole Proprietor">Individual/Sole Proprietor</option><option value="Joint Venture">Joint Venture</option><option value="Limited Liability Company">Limited Liability Company</option><option value="Partnership">Partnership</option><option value="Trust">Trust</option><option value="Corporation or other Organization (other than the above)">Corporation or other Organization (other than the above)</option></select></td>
+                          </td><td><select><option value="Individual/Sole Proprietor">Individual/Sole Proprietor</option><option value="Joint Venture">Joint Venture</option><option value="Limited Liability Company">Limited Liability Company</option><option value="Partnership">Partnership</option><option value="Trust">Trust</option><option value="Corporation or other Organization (other than the above)">Corporation or other Organization (other than the above)</option></select></td>
                             </tr>
                             <tr>
                                 <td>Coverage Start Date:
-                        </td><td><input type="date"></td>
+                          </td><td><input type="text"></td>
                             </tr>
                             <tr>
                                 <td>Street Address:
-                        </td><td><input type="text"></td>
+                          </td><td><input type="text"></td>
                             </tr>
                             <tr>
-                                <td>Address zipcode:
-                        </td><td><input type="text"></td>
+                                <td>Address zipcode</td><td><input type="text" pattern="[0-9]5"></td>
                             </tr>
                             <tr>
                                 <td>AggregateLimit</td><td>
-                          $<input type="number"></td>
+                                $<input type="number" min="1" max="999999" step="any"></td>
                             </tr>
                             <tr>
                                 <td>Deductible amount</td><td>
-                          $<input type="number"></td>
+                                $<input type="number" min="1" max="999999" step="any"></td>
                             </tr>
                             <tr>
                                 <td>Customer Email ID</td><td><input type="email"></td>
                             </tr>
                             <tr>
-                                <td>Customer Phone Number:
-                        </td><td><input type="text"></td><td>Customer Phone Number</td><td><input type="tel"></td>
+                                <td>Customer Phone Number</td><td><input type="tel" pattern="[0-9]3-[0-9]2-[0-9]3"><span style="font-style:italic;"> Format: 123-450-6781</span></td>
                             </tr>
                             <tr>
                                 <td>Name of the Business:
-                        </td><td><input type="text"></td>
+                          </td><td><input type="text"></td>
                             </tr>
                             <tr>
                                 <td>Estimated gross sales for next 12 months:
-                        </td><td><input type="text"></td>
+                          </td><td><input type="text"></td>
                             </tr>
                             <tr>
                                 <td>Estimated Payroll for Small Contractors:
-                        </td><td><input type="text"></td>
+                          </td><td><input type="text"></td>
                             </tr>
                             <tr>
                                 <td>Estimated Payroll for Small Contractors:
-                        </td><td><input type="text"></td>
+                          </td><td><input type="text"></td>
                             </tr>
                             <tr>
                                 <td>Total number of full-time, part-time, and temporary employees does your business have, including yourself:
-                        </td><td><input type="text"></td>
+                          </td><td><input type="text"></td>
                             </tr>
-                            <tr></tr>
-                            <tr></tr>
+                            <tr>
+                                <td>Is your business operated out of your home:
+                          </td><td><input type="text"></td>
+                            </tr>
+                            <tr>
+                                <td>SCForbiddenProjects:
+                          </td><td><input type="text"></td>
+                            </tr>
                         </table>
                         <br>
                         <br>

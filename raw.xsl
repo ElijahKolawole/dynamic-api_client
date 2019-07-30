@@ -16,75 +16,61 @@
                 <table >
                   <xsl:for-each select="QuestionList/Questions">
                     <tr>
-                      <xsl:if test="Response/ResponseType='Text' and not(contains(Response/Responsesubtype, 'Email'))">
-                        <td>
-                          <xsl:value-of select="Description" />:
-                        </td>
-                        <td>
-                          <input type="text"/>
-                        </td>
-                      </xsl:if>
-                      <xsl:if test="Response/ResponseType='Date'">
-                        <td>
-                          <xsl:value-of select="Description" />:
-                        </td>
-                        <td>
-                          <input type="date"/>
-                        </td>
-                      </xsl:if>
-
-                        <xsl:if test="Response/Responsesubtype='Currency(USD)'">
-                        <td>
-                          <xsl:value-of select="Description" />
-                        </td>
-                        <td>
-                          $<input type="number" />
-                        </td>
-                      </xsl:if>
-
-                      
-                      <xsl:if test="Response/ResponseType='Dropdown' and Response/Responsevalues ">
-                        <td>
-                          <xsl:value-of select="Description" />:
-                        </td>
-                        <td>
-                          <select>
-                            <xsl:for-each select="Response/Responsevalues">
-                              <option value="{Value}"><xsl:value-of select="Value" /></option>
-                            </xsl:for-each>
-                          </select>
-                        </td>
-                      </xsl:if>
-
-                       <xsl:if test="Response/Responsesubtype='Email'">
-                        <td>
-                          <xsl:value-of select="Description" />
-                        </td>
-                        <td>
-                          <input type="email" />
-                        </td>
-                      </xsl:if>
-
-                       <!--  <xsl:if test="Response/Responsesubtype='Zipcode5'">
-                        <td>
-                          <xsl:value-of select="Description" />
-                        </td>
-                        <td>
-                          <input type='text' pattern='[0-9]{5}'/>
-                        </td>
-                      </xsl:if>
- -->
-                        <xsl:if test="Response/Responsesubtype='Telephone-US'">
-                        <td>
-                          <xsl:value-of select="Description" />
-                        </td>
-                        <td>
-                          <input type="tel"  pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required /> <span> Format: 123-45-678</span>
-                        </td>
-                      </xsl:if>
-
-
-
+                      <xsl:choose>
+                        <xsl:when test="Response/ResponseType='Dropdown' and Response/Responsesubtype='Currency(USD)'">
+                            <td>
+                                <xsl:value-of select="Description" />
+                                </td>
+                                <td>
+                                $<input type="number"  min="1" max="999999" step="any" />
+                                </td>
+                        </xsl:when>
+                        <xsl:when test="Response/ResponseType='Text' and Response/Responsesubtype='Zipcode5'">
+                          <td>
+                            <xsl:value-of select="Description" />
+                          </td>
+                          <td>
+                            <input type='text' pattern='[0-9]{5}'/>
+                          </td>
+                        </xsl:when>
+                        <xsl:when test="Response/ResponseType='Dropdown' and Response/Responsevalues ">
+                          <td>
+                            <xsl:value-of select="Description" />:
+                          </td>
+                          <td>
+                            <select>
+                              <xsl:for-each select="Response/Responsevalues">
+                                <option value="{Value}"><xsl:value-of select="Value" /></option>
+                              </xsl:for-each>
+                            </select>
+                          </td>
+                        </xsl:when>
+                        <xsl:when test="Response/Responsesubtype='Telephone-US'">
+                          <td>
+                            <xsl:value-of select="Description" />
+                          </td>
+                          <td>
+                            <input type="tel"  pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" /> <span style="font-style:italic;"> Format: 123-450-6781</span>
+                          </td>
+                        </xsl:when>
+                        <xsl:when test="Response/Responsesubtype='Email'">
+                          <td>
+                            <xsl:value-of select="Description" />
+                          </td>
+                          <td>
+                            <input type="email" />
+                          </td>
+                        </xsl:when>
+                        
+                        <xsl:otherwise>
+                          <td>
+                            <xsl:value-of select="Description" />:
+                          </td>
+                          <td>
+                            <input type="text"/>
+                          </td>
+                        </xsl:otherwise>
+                      </xsl:choose>
                     </tr>
                   </xsl:for-each>
                 </table>
