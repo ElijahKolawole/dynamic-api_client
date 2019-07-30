@@ -1,0 +1,28 @@
+https://stackoverflow.com/questions/19951547/create-web-form-from-xsd-and-then-output-xml-form
+ string file = MapPath("~/Recepies.xml");
+
+    XDocument doc;
+
+    //Verify whether a file is exists or not
+    if (!System.IO.File.Exists(file))
+    {
+        doc = new XDocument(new XDeclaration("1.0", "UTF-8", "yes"),
+            new System.Xml.Linq.XElement("Recepies"));
+    }
+    else
+    {
+        doc = XDocument.Load(file);
+    }
+
+    XElement ele = new XElement("Recepie", txtRecepie.Text.Trim());
+    doc.Root.Add(ele);
+    doc.Save(file);
+
+    using (StreamWriter writer = new StreamWriter(Response.OutputStream, new UTF8Encoding(false)))
+    {
+        doc.Save(writer);
+        Response.ContentType = "text/xml";
+        Response.AddHeader("Content-disposition", "attachment;filename=file.xml");
+        Response.Flush();
+        Response.End();
+    }
