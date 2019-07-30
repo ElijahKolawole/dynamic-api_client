@@ -19,6 +19,8 @@ public class QuoteJourney extends HttpServlet {
       response.setContentType("text/html");
 // Get a output writer to write the response message into the network socket
       PrintWriter out = response.getWriter();
+
+      C:\\xampp\\tomcat\\webapps\\dynamic-api_client\\Raw.main(new String[0]);
 // Print an HTML page as the output of the query
       out.println("<html>");
       out.println("<head>");

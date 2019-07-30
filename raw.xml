@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="raw.xsl"?>
+
+<QuestionList>
+            <Questions>
+                        <Question>ApplicantFirstName</Question>
+                        <Description>First Name</Description>
+                        <Response>
+                                    <ResponseType>Text</ResponseType>
+                                    <Responsesubtype>N/A</Responsesubtype>
+                                    <minimumvalue>N/A</minimumvalue>
+                                    <maximumvalue>N/A</maximumvalue>
+                                    <datatype>varchar</datatype>
+                        </Response>
+            </Questions>
+            <Questions>
+                        <Question>ApplicantLastName</Question>
+                        <Description>Last Name</Description>
+                        <Response>
+                                    <ResponseType>Text</ResponseType>
+                                    <datatype>varchar</datatype>
+                        </Response>
+            </Questions>
+            <Questions>
+                        <Question>BusinessCity</Question>
+                        <Description>City Name</Description>
+                        <Response>
+                                    <ResponseType>Text</ResponseType>
+                                    <datatype>varchar</datatype>
+                        </Response>
+            </Questions>
+            <Questions>
+                        <Question>AdditionalLocation</Question>
+                        <Description>Additional locations other than primary location</Description>
+                        <Response>
+                                    <ResponseType>Dropdown</ResponseType>
+                        </Response>
+            </Questions>
+            <Questions>
+                        <Question>BusinessOwnershipStructure</Question>
+                        <Description>Business ownership structure</Description>
+                        <Response>
+                                    <ResponseType>Dropdown</ResponseType>
+                                    <Responsevalues>
+                                                <Value>Individual/Sole Proprietor</Value>
+                                    </Responsevalues>
+                                    <Responsevalues>
+                                                <Value>Joint Venture</Value>
+                                    </Responsevalues>
+                                    <Responsevalues>
+                                                <Value>Limited Liability Company</Value>
+                                    </Responsevalues>
+                                    <Responsevalues>
+                                                <Value>Partnership</Value>
+                                    </Responsevalues>
+                                    <Responsevalues>
+                                                <Value>Trust</Value>
+                                    </Responsevalues>
+                                    <Responsevalues>
+                                                <Value>Corporation or other Organization (other than the above)</Value>
+                                    </Responsevalues>
+                        </Response>
+            </Questions>
+            <Questions>
+                        <Question>CovgStartDate</Question>
+                        <Description>Coverage Start Date</Description>
+                        <Response>
+                                    <ResponseType>Date</ResponseType>
+                                    <minimumvalue>today</minimumvalue>
+                                    <Responsevalues/>
+                        </Response>
+            </Questions>
+            <Questions>
+                        <Question>Street</Question>
+                        <Description>Street Address</Description>
+                        <Response>
+                                    <ResponseType>Text</ResponseType>
+                                    <datatype>varchar</datatype>
+                        </Response>
+            </Questions>
+            <Questions>
+                        <Question>ZipCode</Question>
+                        <Description>Address zipcode</Description>
+                        <Response>
+                                    <ResponseType>Text</ResponseType>
+                                    <Responsesubtype>Zipcode5</Responsesubtype>
+                                    <datatype>varchar</datatype>
+                        </Response>
+            </Questions>
+            <Questions>
+                        <Question>AggregateLOI</Question>
+                        <Description>AggregateLimit</Description>
+                        <Response>
+                                    <ResponseType>Dropdown</ResponseType>
+                                    <Responsesubtype>Currency(USD)</Responsesubtype>
+                                    <datatype>numeric</datatype>
+                        </Response>
+            </Questions>
+            <Questions>
+                        <Question>Deductible</Question>
+                        <Description>Deductible amount</Description>
+                        <Response>
+                                    <ResponseType>Dropdown</ResponseType>
+                                    <Responsesubtype>Currency(USD)</Responsesubtype>
+                                    <datatype>numeric</datatype>
+                        </Response>
+            </Questions>
+            <Questions>
+                        <Question>EmailAddress</Question>
+                        <Description>Customer Email ID</Description>
+                        <Response>
+                                    <ResponseType>Text</ResponseType>
+                                    <Responsesubtype>Email</Responsesubtype>
+                                    <datatype>varchar</datatype>
+                        </Response>
+            </Questions>
+            <Questions>
+                        <Question>TelephoneNumber</Question>
+                        <Description>Customer Phone Number</Description>
+                        <Response>
+                                    <ResponseType>Text</ResponseType>
+                                    <Responsesubtype>Telephone-US</Responsesubtype>
+                                    <datatype>varchar</datatype>
+                        </Response>
+            </Questions>
+            <Questions>
+                        <Question>BusinessName</Question>
+                        <Description>Name of the Business</Description>
+                        <Response>
+                                    <ResponseType>Text</ResponseType>
+                        </Response>
+            </Questions>
+            <Questions>
+                        <Question>EstmtdAnnualGrossSales</Question>
+                        <Description>Estimated gross sales for next 12 months</Description>
+                        <Response>
+                                    <ResponseType>Text</ResponseType>
+                        </Response>
+            </Questions>
+            <Questions>
+                        <Question>EstmtdPayrollSC</Question>
+                        <Description>Estimated Payroll for Small Contractors</Description>
+                        <Response>
+                                    <ResponseType>Text</ResponseType>
+                        </Response>
+            </Questions>
+            <Questions>
+                        <Question>EstmtdPayrollSCContractors</Question>
+                        <Description>Estimated Payroll for Small Contractors</Description>
+                        <Response>
+                                    <ResponseType>Text</ResponseType>
+                        </Response>
+            </Questions>
+            <Questions>
+                        <Question>NumOfEmployees</Question>
+                        <Description>Total number of full-time, part-time, and temporary employees does your business have, including yourself</Description>
+                        <Response>
+                                    <ResponseType>Text</ResponseType>
+                        </Response>
+            </Questions>
+            <Questions>
+                        <Question>OperatedFromHome</Question>
+                        <Description>Is your business operated out of your home</Description>
+                        <Response>
+                                    <ResponseType>Radio</ResponseType>
+                        </Response>
+            </Questions>
+            <Questions>
+                        <Question>SCForbiddenProjects</Question>
+                        <Description>SCForbiddenProjects</Description>
+                        <Response>
+                                    <ResponseType>Radio</ResponseType>
+                        </Response>
+            </Questions>
+            
+</QuestionList>
