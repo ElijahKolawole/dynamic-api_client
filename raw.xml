@@ -34,6 +34,18 @@
                         <Description>Additional locations other than primary location</Description>
                         <Response>
                                     <ResponseType>Dropdown</ResponseType>
+                                     <Responsevalues>
+                                                <Value>1</Value>
+                                    </Responsevalues>
+                                    <Responsevalues>
+                                                <Value>2</Value>
+                                    </Responsevalues>
+                                    <Responsevalues>
+                                                <Value>3</Value>
+                                    </Responsevalues>
+                                    <Responsevalues>
+                                                <Value>4</Value>
+                                    </Responsevalues>
                         </Response>
             </Questions>
             <Questions>

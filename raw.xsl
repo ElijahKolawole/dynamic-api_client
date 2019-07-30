@@ -6,7 +6,7 @@
         <title>Quote-Journey</title>
       </head>
       <body style="font-family: HelveticaNeueLTStd-Lt,sans-serif;">
-        <form action="quoter.html" method="get" id="quote_form_1">
+        <form action="quoter.html" method="post" id="quote_form_1">
           <fieldset>
             <legend><h3>Dynamic Quote in seconds</h3></legend>
            <!--  <xsl:apply-templates/>  -->
@@ -35,10 +35,9 @@
                         </td>
                         <td>
                               <select>
-                                <option value="{Response/Responsevalues/Value}"><xsl:value-of select="Response/Responsevalues/Value[0]" /></option>
-                                <option value="saab">Saab</option>
-                                <option value="mercedes">Mercedes</option>
-                                <option value="audi">Audi</option>
+                                     <xsl:for-each select="Response/Responsevalues">
+                                <option value="{Value}"><xsl:value-of select="Value" /></option>
+                               </xsl:for-each>
                               </select>
                         </td>
                     </xsl:if>
