@@ -36,7 +36,7 @@ public class SummaryServlet extends HttpServlet {
 // out.println("<h1>--------------</h1>");
       out.println("</div>");
       out.println("<div class='content'>");
-      out.println("<div id='main'> id='quote_main");
+      out.println("<div id='main' id='quote_main'> ");
       out.println("<h2>Quote Summary </h2>");
       out.println("<form action='/dynamic-api_client/quote' method='get' id='form'>");
       out.println("<fieldset>");

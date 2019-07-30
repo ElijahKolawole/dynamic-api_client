@@ -37,6 +37,7 @@
   <th>F</th>
 </tr>
 <xsl:for-each select="QuestionList/Questions"> 
+  <xsl:sort select="Description"/>
   <tr>
     <td><xsl:value-of select="Question"/></td>
     <td><xsl:value-of select="Description"/></td>
@@ -54,6 +55,12 @@
   </tr>
 </xsl:for-each> 
 </table>
+
+<xsl:for-each select="QuestionList/Questions"> 
+  <div><xsl:value-of select="Question"/> 
+          <input type="text" name="Description"/>
+</div>
+</xsl:for-each>
 </body>
 </html>
 </xsl:template>
