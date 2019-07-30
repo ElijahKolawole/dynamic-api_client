@@ -79,7 +79,7 @@
                           <xsl:value-of select="Description" />
                         </td>
                         <td>
-                          <input type="tel" />
+                          <input type="tel"  pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required /> <span> Format: 123-45-678</span>
                         </td>
                       </xsl:if>
 
