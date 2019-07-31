@@ -82,7 +82,7 @@
                     </tr>
                   </xsl:for-each>
                 </table>
-                <br /> <br /><button type='submit' form='quote_form_1' value='Submit'>Submit Info</button>
+                <br /><button type='submit' form='quote_form_1' value='Submit'>Submit Info</button>
                 <!-- <button type="submit" value="Submit" onclick='printFormContents(this.form);return false;' id="quoteBtn">Get A Quote</button> -->
               </fieldset>
             </form>
