@@ -109,10 +109,10 @@ margin-right: 30%
 }
 button:hover{
 background-color:darkgrey;
-font-size: 20px;
+font-size: 18px;
 
 }
 table tr:hover td{
 background-color: darkgrey;
-font-size: 20px;
+font-size: 18px;
 }
