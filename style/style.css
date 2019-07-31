@@ -109,3 +109,7 @@ h2{
 a{
   text-decoration: none
 }
+
+tr:nth-child(odd) {
+    background-color: #EEE;
+}

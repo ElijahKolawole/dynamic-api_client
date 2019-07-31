@@ -19,7 +19,7 @@
                       <xsl:choose>
                         <xsl:when test="Response/ResponseType='Dropdown' and Response/Responsesubtype='Currency(USD)'">
                             <td>
-                                <xsl:value-of select="Description" />
+                                <label for=""><xsl:value-of select="Description" /></label>
                                 </td>
                                 <td>
                                 $<input type="number"  min="1" max="999999" step="any"  placeholder="500"  />
@@ -27,7 +27,7 @@
                         </xsl:when>
                         <xsl:when test="Response/ResponseType='Date'">
                               <td>
-                              <xsl:value-of select="Description" />:
+                              <label for=""><xsl:value-of select="Description" />:</label>
                               </td>
                               <td>
                               <input type="date" />
@@ -35,7 +35,7 @@
                               </xsl:when>
                         <xsl:when test="Response/ResponseType='Text' and Response/Responsesubtype='Zipcode5'">
                           <td>
-                            <xsl:value-of select="Description" />
+                            <label for=""><xsl:value-of select="Description" /></label>
                           </td>
                           <td>
                             <input type='text' pattern='[0-9]{5}' placeholder="50029"/>
@@ -43,7 +43,7 @@
                         </xsl:when>
                         <xsl:when test="Response/ResponseType='Dropdown' and Response/Responsevalues ">
                           <td>
-                            <xsl:value-of select="Description" />:
+                            <label for=""><xsl:value-of select="Description" />:</label>
                           </td>
                           <td>
                             <select>
@@ -55,15 +55,15 @@
                         </xsl:when>
                         <xsl:when test="Response/Responsesubtype='Telephone-US'">
                           <td>
-                            <xsl:value-of select="Description" />
+                            <label for=""><xsl:value-of select="Description" /></label>
                           </td>
                           <td>
-                            <input type="tel"  pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" placeholder="123-450-6781"/> <span style="font-style:italic;"  > Format: 123-450-6781</span>
+                            <input type="tel"  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-6712" required="true" /> <small style="font-style:italic;"  > Format: 123-456-6712</small>
                           </td>
                         </xsl:when>
                         <xsl:when test="Response/Responsesubtype='Email'">
                           <td>
-                            <xsl:value-of select="Description" />
+                            <label for=""><xsl:value-of select="Description" /></label>
                           </td>
                           <td>
                             <input type="email" placeholder="b_owner@biz.com" />
@@ -72,7 +72,7 @@
                         
                         <xsl:otherwise>
                           <td>
-                            <xsl:value-of select="Description" />:
+                            <label for=""><xsl:value-of select="Description" />:</label>
                           </td>
                           <td>
                             <input type="text"/>
