@@ -1,83 +1,87 @@
 <html>
-    <head>
-        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Quote-Journey</title>
-        <link href="style/style.css" rel="stylesheet" type="text/css">
-    </head>
-    <body style="font-family: HelveticaNeueLTStd-Lt,sans-serif;">
-        <div class="content">
-            <div id="quote_main">
-                <form action="quoter.html" method="post" id="quote_form_1">
-                    <fieldset>
-                        <legend>
-                            <h3>Dynamic Quote in seconds</h3>
-                        </legend>
-                        <table>
-                            <tr>
-                                <td><label for="">What is your First Name:</label></td><td><input type="text"></td>
-                            </tr>
-                            <tr>
-                                <td><label for="">Last Name:</label></td><td><input type="text"></td>
-                            </tr>
-                            <tr>
-                                <td><label for="">City Name:</label></td><td><input type="text"></td>
-                            </tr>
-                            <tr>
-                                <td><label for="">Additional locations other than primary location:</label></td><td><select><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5+">5+</option></select></td>
-                            </tr>
-                            <tr>
-                                <td><label for="">Business ownership structure:</label></td><td><select><option value="Individual/Sole Proprietor">Individual/Sole Proprietor</option><option value="Joint Venture">Joint Venture</option><option value="Limited Liability Company">Limited Liability Company</option><option value="Partnership">Partnership</option><option value="Trust">Trust</option><option value="Corporation or other Organization (other than the above)">Corporation or other Organization (other than the above)</option></select></td>
-                            </tr>
-                            <tr>
-                                <td><label for="">Coverage Start Date:</label></td><td><input type="date"></td>
-                            </tr>
-                            <tr>
-                                <td><label for="">Street Address:</label></td><td><input type="text"></td>
-                            </tr>
-                            <tr>
-                                <td><label for="">Address zipcode</label></td><td><input type="text" pattern="[0-9]5" placeholder="50029"></td>
-                            </tr>
-                            <tr>
-                                <td><label for="">AggregateLimit</label></td><td>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Quote-Journey</title>
+<link href="style/style.css" rel="stylesheet" type="text/css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body style="font-family: HelveticaNeueLTStd-Lt,sans-serif;">
+<div class="content">
+<div id="quote_main">
+<form action="quoter.html" method="post" id="quote_form_1">
+<fieldset>
+<legend>
+<h3>Dynamic Quote in seconds</h3>
+</legend>
+<table>
+<tr>
+<td id="title1" colspan="100%">BUSINESS OWNERS' INFORMATION, THEN BUSINESS INFORMATION</td>
+</tr>
+<tr>
+<td><label for="">What is your First Name:</label></td><td><input type="text"></td>
+</tr>
+<tr>
+<td><label for="">What is your Last Name:</label></td><td><input type="text"></td>
+</tr>
+<tr>
+<td><label for="">Provide Customer Email ID</label></td><td><input type="email" placeholder="b_owner@biz.com"></td>
+</tr>
+<tr>
+<td style="border-bottom: 1px solid black;"><label for="">Provide Customer Phone Number</label></td><td style="border-bottom: 1px solid black;"><input type="tel" pattern="[0-9]3-[0-9]3-[0-9]4" placeholder="123-456-6712" required="true"><small style="font-style:italic;"> Format: 123-456-6712</small></td>
+</tr>
+<tr>
+<td><label for="">Name of the Business:</label></td><td><input type="text"></td>
+</tr>
+<tr>
+<td><label for="">City Name:</label></td><td><input type="text"></td>
+</tr>
+<tr>
+<td><label for="">Street Address:</label></td><td><input type="text"></td>
+</tr>
+<tr>
+<td><label for="">Address zipcode</label></td><td><input type="text" pattern="[0-9]5" placeholder="50029"></td>
+</tr>
+<tr>
+<td><label for="">Additional locations other than primary location:</label></td><td><select><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5+">5+</option></select></td>
+</tr>
+<tr>
+<td><label for="">Business ownership structure:</label></td><td><select><option value="Individual/Sole Proprietor">Individual/Sole Proprietor</option><option value="Joint Venture">Joint Venture</option><option value="Limited Liability Company">Limited Liability Company</option><option value="Partnership">Partnership</option><option value="Trust">Trust</option><option value="Corporation or other Organization (other than the above)">Corporation or other Organization (other than the above)</option></select></td>
+</tr>
+<tr>
+<td><label for="">Coverage Start Date:</label></td><td><input type="date"></td>
+</tr>
+<tr>
+<td><label for="">AggregateLimit</label></td><td>
                                 $<input type="number" min="1" max="999999" step="any" placeholder="500"></td>
-                            </tr>
-                            <tr>
-                                <td><label for="">Deductible amount</label></td><td>
+</tr>
+<tr>
+<td><label for="">Deductible amount</label></td><td>
                                 $<input type="number" min="1" max="999999" step="any" placeholder="500"></td>
-                            </tr>
-                            <tr>
-                                <td><label for="">Customer Email ID</label></td><td><input type="email" placeholder="b_owner@biz.com"></td>
-                            </tr>
-                            <tr>
-                                <td><label for="">Customer Phone Number</label></td><td><input type="tel" pattern="[0-9]3-[0-9]3-[0-9]4" placeholder="123-456-6712" required="true"><small style="font-style:italic;"> Format: 123-456-6712</small></td>
-                            </tr>
-                            <tr>
-                                <td><label for="">Name of the Business:</label></td><td><input type="text"></td>
-                            </tr>
-                            <tr>
-                                <td><label for="">Estimated gross sales for next 12 months:</label></td><td><input type="text"></td>
-                            </tr>
-                            <tr>
-                                <td><label for="">Estimated Payroll for Small Contractors:</label></td><td><input type="text"></td>
-                            </tr>
-                            <tr>
-                                <td><label for="">Estimated Payroll for Small Contractors:</label></td><td><input type="text"></td>
-                            </tr>
-                            <tr>
-                                <td><label for="">Total number of full-time, part-time, and temporary employees does your business have, including yourself:</label></td><td><input type="text"></td>
-                            </tr>
-                            <tr>
-                                <td><label for="">Is your business operated out of your home:</label></td><td><input type="text"></td>
-                            </tr>
-                            <tr>
-                                <td><label for="">SCForbiddenProjects:</label></td><td><input type="text"></td>
-                            </tr>
-                        </table>
-                        <br>
-                        <button type="submit" form="quote_form_1" value="Submit">Submit Info</button>
-                    </fieldset>
-                </form>
-            </div>
-        </div>
-    </body>
+</tr>
+<tr>
+<td><label for="">Estimated gross sales for next 12 months:</label></td><td><input type="text"></td>
+</tr>
+<tr>
+<td><label for="">Estimated Payroll for Small Contractors:</label></td><td><input type="text"></td>
+</tr>
+<tr>
+<td><label for="">Estimated Payroll for Small Contractors:</label></td><td><input type="text"></td>
+</tr>
+<tr>
+<td><label for="">Total number of full-time, part-time, and temporary employees does your business have, including yourself:</label></td><td><input type="text"></td>
+</tr>
+<tr>
+<td><label for="">Is your business operated out of your home</label></td><td><input type="radio" name="OperatedFromHome" value="Yes">Yes<input type="radio" name="OperatedFromHome" value="No">No</td>
+</tr>
+<tr>
+<td><label for="">SCForbiddenProjects</label></td><td><input type="radio" name="SCForbiddenProjects" value="Yes">Yes<input type="radio" name="SCForbiddenProjects" value="No">No</td>
+</tr>
+</table>
+<br>
+<button type="submit" form="quote_form_1" value="Submit" id="mybutton">Submit Info</button>
+</fieldset>
+</form>
+</div>
+</div>
+</body>
 </html>

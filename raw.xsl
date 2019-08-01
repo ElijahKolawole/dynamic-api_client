@@ -5,6 +5,7 @@
       <head>
         <title>Quote-Journey</title>
         <link href="style/style.css" rel="stylesheet" type="text/css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
       </head>
       <body style="font-family: HelveticaNeueLTStd-Lt,sans-serif;">
         <div class="content">
@@ -14,6 +15,9 @@
                 <legend><h3>Dynamic Quote in seconds</h3></legend>
                 <!--  <xsl:apply-templates/>  -->
                 <table >
+                   <tr>
+                       <td id="title1" colspan="100%">BUSINESS OWNERS' INFORMATION, THEN BUSINESS INFORMATION</td>
+                   </tr>
                   <xsl:for-each select="QuestionList/Questions">
                     <tr>
                       <xsl:choose>
@@ -53,20 +57,35 @@
                             </select>
                           </td>
                         </xsl:when>
-                        <xsl:when test="Response/Responsesubtype='Telephone-US'">
-                          <td>
+                        <xsl:when test="Response/ResponseType='Text' and Response/Responsesubtype='Telephone-US'">
+                          <td style="border-bottom: 1px solid black;">
                             <label for=""><xsl:value-of select="Description" /></label>
                           </td>
-                          <td>
+                          <td style="border-bottom: 1px solid black;">
                             <input type="tel"  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-6712" required="true" /> <small style="font-style:italic;"  > Format: 123-456-6712</small>
                           </td>
+                          <!-- <tr style="border-bottom:1px solid black"> -->
+                             
+                          <!-- </tr> -->
                         </xsl:when>
-                        <xsl:when test="Response/Responsesubtype='Email'">
+                        <xsl:when test="Response/ResponseType='Text' and Response/Responsesubtype='Email'">
                           <td>
                             <label for=""><xsl:value-of select="Description" /></label>
                           </td>
                           <td>
                             <input type="email" placeholder="b_owner@biz.com" />
+                          </td>
+                        </xsl:when>
+                          <xsl:when test="Response/ResponseType='Radio' ">
+                          <td>
+                            <label for=""><xsl:value-of select="Description" /></label>
+                          </td>
+                          <td>
+                               <xsl:for-each select="Response/Responsevalues"> 
+                                <!-- <option value="{Value}"><xsl:value-of select="Value" /></option> -->
+                                <input type="radio"  name="{../../Question}" value="{Value}"/><xsl:value-of select="Value" />
+                              </xsl:for-each> 
+                        
                           </td>
                         </xsl:when>
                         
@@ -82,7 +101,7 @@
                     </tr>
                   </xsl:for-each>
                 </table>
-                <br /><button type='submit' form='quote_form_1' value='Submit'>Submit Info</button>
+                <br /><button type='submit' form='quote_form_1' value='Submit' id="mybutton">Submit Info</button>
                 <!-- <button type="submit" value="Submit" onclick='printFormContents(this.form);return false;' id="quoteBtn">Get A Quote</button> -->
               </fieldset>
             </form>
