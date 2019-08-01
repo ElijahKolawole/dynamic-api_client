@@ -12,7 +12,7 @@ public static void main(String[] args) {
     Transformer transformer =
       tFactory.newTransformer
          (new javax.xml.transform.stream.StreamSource
-            ("raw.xsl"));
+            ("raw2.xsl"));
 
     transformer.transform
       (new javax.xml.transform.stream.StreamSource

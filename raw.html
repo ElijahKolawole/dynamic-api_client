@@ -1,94 +1,174 @@
 <html>
-<head>
-<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Quote-Journey</title>
-<link href="style/style.css" rel="stylesheet" type="text/css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-</head>
-<body style="font-family: HelveticaNeueLTStd-Lt,sans-serif;">
-<script>
-            document.getElementById('datePicker').value = new Date().toDateInputValue();
-          </script>
-<div class="content">
-<div id="quote_main">
-<form action="quoter.html" method="post" id="quote_form_1">
-<fieldset>
-<legend>
-<h3>Dynamic Quote in seconds</h3>
-</legend>
-<table>
-<tr>
-<td id="title1" colspan="100%">BUSINESS OWNERS' INFORMATION, THEN BUSINESS INFORMATION</td>
-</tr>
-<tr>
-<td><label for="">First Name:</label></td><td><input type="text" name="ApplicantFirstName"></td>
-</tr>
-<tr>
-<td><label for="">Last Name:</label></td><td><input type="text" name="ApplicantLastName"></td>
-</tr>
-<tr>
-<td><label for="">Customer Email ID</label></td><td><input type="email" name="EmailAddress" placeholder="b_owner@biz.com"></td>
-</tr>
-<tr>
-<td style="border-bottom: 1px solid black;"><label for="">Customer Phone Number</label></td><td style="border-bottom: 1px solid black;"><input type="text" name="TelephoneNumber" placeholder="123-456-6712"><small style="font-style:italic;"> Format: 123-456-6712</small></td>
-</tr>
-<tr>
-<td><label for="">Name of the Business:</label></td><td><input type="text" name="BusinessName"></td>
-</tr>
-<tr>
-<td><label for="">Street Address:</label></td><td><input type="text" name="Street"></td>
-</tr>
-<tr>
-<td><label for="">City Name:</label></td><td><input type="text" name="BusinessCity"></td>
-</tr>
-<tr>
-<td><label for="">Address zipcode</label></td><td><input type="text" name="ZipCode" pattern="[0-9]5" placeholder="50029"></td>
-</tr>
-<tr>
-<td><label for="">Additional locations other than primary location:</label></td><td><select name="AdditionalLocation"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5+">5+</option></select></td>
-</tr>
-<tr>
-<td><label for="">Business ownership structure:</label></td><td><select name="BusinessOwnershipStructure"><option value="Individual/Sole Proprietor">Individual/Sole Proprietor</option><option value="Joint Venture">Joint Venture</option><option value="Limited Liability Company">Limited Liability Company</option><option value="Partnership">Partnership</option><option value="Trust">Trust</option><option value="Corporation or other Organization (other than the above)">Corporation or other Organization (other than the above)</option></select></td>
-</tr>
-<tr>
-<td><label for="">Coverage Start Date:</label></td><td><input id="datePicker" type="date" name="CovgStartDate"></td>
-</tr>
-<tr>
-<td><label for="">AggregateLimit</label></td><td>
-                                $<input type="number" min="1" max="999999" step="any" placeholder="500" name="AggregateLOI"></td>
-</tr>
-<tr>
-<td><label for="">Deductible amount</label></td><td>
-                                $<input type="number" min="1" max="999999" step="any" placeholder="500" name="Deductible"></td>
-</tr>
-<tr>
-<td><label for="">Estimated gross sales for next 12 months:</label></td><td><input type="text" name="EstmtdAnnualGrossSales"></td>
-</tr>
-<tr>
-<td><label for="">Estimated Payroll for Small Contractors:</label></td><td><input type="text" name="EstmtdPayrollSC"></td>
-</tr>
-<tr>
-<td><label for="">Estimated Payroll for Small Contractors:</label></td><td><input type="text" name="EstmtdPayrollSCContractors"></td>
-</tr>
-<tr>
-<td><label for="">Total number of full-time, part-time, and temporary employees does your business have, including yourself:</label></td><td><input type="text" name="NumOfEmployees"></td>
-</tr>
-<tr>
-<td><label for="">Is your business operated out of your home</label></td><td><input type="radio" name="OperatedFromHome" value="Yes">Yes &nbsp;
-                              <input type="radio" name="OperatedFromHome" value="No">No &nbsp;
-                              </td>
-</tr>
-<tr>
-<td><label for="">SCForbiddenProjects</label></td><td><input type="radio" name="SCForbiddenProjects" value="Yes">Yes &nbsp;
-                              <input type="radio" name="SCForbiddenProjects" value="No">No &nbsp;
-                              </td>
-</tr>
-</table>
-<br>
-<button type="submit" form="quote_form_1" value="Submit" id="mybutton">Submit Info</button>
-</fieldset>
-</form>
-</div>
-</div>
-</body>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Quote-Journey-2</title>
+        <link rel="stylesheet" href="responsive-style.css">
+    </head>
+    <body style="font-family: HelveticaNeueLTStd-Lt,sans-serif;">
+        <div class="container">
+            <form action="quoter.html" method="post">
+                <fieldset>
+                    <legend>
+                        <h3>Dynamic Quote in seconds</h3>
+                    </legend>
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="">First Name:</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="text" name="ApplicantFirstName">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="">Last Name:</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="text" name="ApplicantLastName">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="">Customer Email ID</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="email" name="EmailAddress" placeholder="b_owner@biz.com">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="">Customer Phone Number</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="text" name="TelephoneNumber" placeholder="123-456-6712">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="">Name of the Business:</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="text" name="BusinessName">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="">Street Address:</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="text" name="Street">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="">City Name:</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="text" name="BusinessCity">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="">Address zipcode</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="text" name="ZipCode" pattern="[0-9]5" placeholder="50029">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="">Additional locations other than primary location:</label>
+                        </div>
+                        <div class="col-75">
+                            <select name="AdditionalLocation"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5+">5+</option></select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="">Business ownership structure:</label>
+                        </div>
+                        <div class="col-75">
+                            <select name="BusinessOwnershipStructure"><option value="Individual/Sole Proprietor">Individual/Sole Proprietor</option><option value="Joint Venture">Joint Venture</option><option value="Limited Liability Company">Limited Liability Company</option><option value="Partnership">Partnership</option><option value="Trust">Trust</option><option value="Corporation or other Organization (other than the above)">Corporation or other Organization (other than the above)</option></select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="">Coverage Start Date:</label>
+                        </div>
+                        <div class="col-75">
+                            <input id="datePicker" type="date" name="CovgStartDate">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="">AggregateLimit</label>
+                        </div>
+                        <div class="col-75">
+                            $<input type="number" min="1" max="999999" step="any" placeholder="500" name="AggregateLOI">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="">Deductible amount</label>
+                        </div>
+                        <div class="col-75">
+                            $<input type="number" min="1" max="999999" step="any" placeholder="500" name="Deductible">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="">Estimated gross sales for next 12 months:</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="text" name="EstmtdAnnualGrossSales">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="">Estimated Payroll for Small Contractors:</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="text" name="EstmtdPayrollSC">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="">Estimated Payroll for Small Contractors:</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="text" name="EstmtdPayrollSCContractors">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="">Total number of full-time, part-time, and temporary employees does your business have, including yourself:</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="text" name="NumOfEmployees">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="">Is your business operated out of your home</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="radio" name="OperatedFromHome" value="Yes">Yes &nbsp;
+                          <input type="radio" name="OperatedFromHome" value="No">No &nbsp;
+                          
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="">SCForbiddenProjects</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="radio" name="SCForbiddenProjects" value="Yes">Yes &nbsp;
+                          <input type="radio" name="SCForbiddenProjects" value="No">No &nbsp;
+                          
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </body>
 </html>

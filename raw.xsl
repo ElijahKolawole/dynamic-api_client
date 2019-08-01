@@ -6,6 +6,8 @@
         <title>Quote-Journey</title>
         <link href="style/style.css" rel="stylesheet" type="text/css"/>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"/>
+
 
       </head>
       <body style="font-family: HelveticaNeueLTStd-Lt,sans-serif;">
@@ -18,7 +20,8 @@
               <fieldset>
                 <legend><h3>Dynamic Quote in seconds</h3></legend>
                 <!--  <xsl:apply-templates/>  -->
-                <table >
+              
+                <table class="w3-table-all">
                    <tr>
                        <td id="title1" colspan="100%">BUSINESS OWNERS' INFORMATION, THEN BUSINESS INFORMATION</td>
                    </tr>
@@ -66,7 +69,7 @@
                             <label for=""><xsl:value-of select="Description" /></label>
                           </td>
                           <td style="border-bottom: 1px solid black;">
-                            <input type="text" name="{Question}"  placeholder="123-456-6712" /> <small style="font-style:italic;"  > Format: 123-456-6712</small>
+                            <input type="text" name="{Question}"  placeholder="123-456-6712" /> <small style="font-style:italic;"  > </small>
                           </td>
                           <!-- <tr style="border-bottom:1px solid black"> -->
                              
@@ -93,17 +96,18 @@
                         </xsl:when>
                         
                         <xsl:otherwise>
-                          <td>
+                          
                             <label for=""><xsl:value-of select="Description" />:</label>
-                          </td>
-                          <td>
+                          
+                          
                             <input type="text" name="{Question}" />
-                          </td>
+                          
                         </xsl:otherwise>
                       </xsl:choose>
                     </tr>
                   </xsl:for-each>
                 </table>
+             
                 <br /><button type='submit' form='quote_form_1' value='Submit' id="mybutton">Submit Info</button>
                 <!-- <button type="submit" value="Submit" onclick='printFormContents(this.form);return false;' id="quoteBtn">Get A Quote</button> -->
               </fieldset>
