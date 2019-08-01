@@ -36,6 +36,14 @@
                                 $<input type="number"  min="1" max="999999" step="any"  placeholder="500" name="{Question}"  />
                                 </td>
                         </xsl:when>
+                         <xsl:when test="Response/ResponseType='Text' and Question='NumOfEmployees'">
+                            <td>
+                                <label for=""><xsl:value-of select="Description" /></label>
+                                </td>
+                                <td>
+                                $<input type="number"  min="1" max="999999" step="any"  placeholder="10" name="{Question}"  />
+                                </td>
+                        </xsl:when>
                         <xsl:when test="Response/ResponseType='Date'">
                               <td>
                               <label for=""><xsl:value-of select="Description" />:</label>

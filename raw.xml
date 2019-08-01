@@ -161,6 +161,8 @@
                         <Description>Estimated Payroll for Small Contractors</Description>
                         <Response>
                                     <ResponseType>Text</ResponseType>
+                                    <Responsesubtype>Currency(USD)</Responsesubtype>
+                                    <datatype>numeric</datatype>
                         </Response>
             </Questions>
             <Questions>
@@ -168,6 +170,8 @@
                         <Description>Estimated Payroll for Small Contractors</Description>
                         <Response>
                                     <ResponseType>Text</ResponseType>
+                                    <Responsesubtype>Currency(USD)</Responsesubtype>
+                                    <datatype>numeric</datatype>
                         </Response>
             </Questions>
             <Questions>
