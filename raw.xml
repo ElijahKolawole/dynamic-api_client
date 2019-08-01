@@ -46,18 +46,19 @@
                                     <ResponseType>Text</ResponseType>
                         </Response>
             </Questions>
+          
+            
             <Questions>
-                        <Question>BusinessCity</Question>
-                        <Description>City Name</Description>
+                        <Question>Street</Question>
+                        <Description>Street Address</Description>
                         <Response>
                                     <ResponseType>Text</ResponseType>
                                     <datatype>varchar</datatype>
                         </Response>
             </Questions>
-            
-            <Questions>
-                        <Question>Street</Question>
-                        <Description>Street Address</Description>
+              <Questions>
+                        <Question>BusinessCity</Question>
+                        <Description>City Name</Description>
                         <Response>
                                     <ResponseType>Text</ResponseType>
                                     <datatype>varchar</datatype>

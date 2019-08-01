@@ -122,3 +122,6 @@ font-size: 16.5px;
 	font-weight: bold;
 	text-align: center;
 }
+input[type=text]{
+    width:100%
+}

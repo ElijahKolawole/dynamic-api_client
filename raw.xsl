@@ -6,8 +6,12 @@
         <title>Quote-Journey</title>
         <link href="style/style.css" rel="stylesheet" type="text/css"/>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
       </head>
       <body style="font-family: HelveticaNeueLTStd-Lt,sans-serif;">
+         <script>
+            document.getElementById('datePicker').value = new Date().toDateInputValue();
+          </script>
         <div class="content">
           <div id="quote_main">
             <form action="quoter.html" method="post" id="quote_form_1">
@@ -26,7 +30,7 @@
                                 <label for=""><xsl:value-of select="Description" /></label>
                                 </td>
                                 <td>
-                                $<input type="number"  min="1" max="999999" step="any"  placeholder="500"  />
+                                $<input type="number"  min="1" max="999999" step="any"  placeholder="500" name="{Question}"  />
                                 </td>
                         </xsl:when>
                         <xsl:when test="Response/ResponseType='Date'">
@@ -34,7 +38,7 @@
                               <label for=""><xsl:value-of select="Description" />:</label>
                               </td>
                               <td>
-                              <input type="date" />
+                              <input id="datePicker" type="date" name="{Question}" />
                               </td>
                               </xsl:when>
                         <xsl:when test="Response/ResponseType='Text' and Response/Responsesubtype='Zipcode5'">
@@ -42,7 +46,7 @@
                             <label for=""><xsl:value-of select="Description" /></label>
                           </td>
                           <td>
-                            <input type='text' pattern='[0-9]{5}' placeholder="50029"/>
+                            <input type='text' name="{Question}"  pattern='[0-9]{5}' placeholder="50029"/>
                           </td>
                         </xsl:when>
                         <xsl:when test="Response/ResponseType='Dropdown' and Response/Responsevalues ">
@@ -50,7 +54,7 @@
                             <label for=""><xsl:value-of select="Description" />:</label>
                           </td>
                           <td>
-                            <select>
+                            <select name="{Question}" >
                               <xsl:for-each select="Response/Responsevalues">
                                 <option value="{Value}"><xsl:value-of select="Value" /></option>
                               </xsl:for-each>
@@ -62,7 +66,7 @@
                             <label for=""><xsl:value-of select="Description" /></label>
                           </td>
                           <td style="border-bottom: 1px solid black;">
-                            <input type="tel"  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-6712" required="true" /> <small style="font-style:italic;"  > Format: 123-456-6712</small>
+                            <input type="text" name="{Question}"  placeholder="123-456-6712" /> <small style="font-style:italic;"  > Format: 123-456-6712</small>
                           </td>
                           <!-- <tr style="border-bottom:1px solid black"> -->
                              
@@ -73,7 +77,7 @@
                             <label for=""><xsl:value-of select="Description" /></label>
                           </td>
                           <td>
-                            <input type="email" placeholder="b_owner@biz.com" />
+                            <input type="email"  name="{Question}" placeholder="b_owner@biz.com" />
                           </td>
                         </xsl:when>
                           <xsl:when test="Response/ResponseType='Radio' ">
@@ -83,10 +87,9 @@
                           <td>
                                <xsl:for-each select="Response/Responsevalues"> 
                                 <!-- <option value="{Value}"><xsl:value-of select="Value" /></option> -->
-                                <input type="radio"  name="{../../Question}" value="{Value}"/><xsl:value-of select="Value" />
+                                <input type="radio"  name="{../../Question}" value="{Value}"/><xsl:value-of select="Value"/> &#160;
                               </xsl:for-each> 
-                        
-                          </td>
+                              </td>
                         </xsl:when>
                         
                         <xsl:otherwise>
@@ -94,7 +97,7 @@
                             <label for=""><xsl:value-of select="Description" />:</label>
                           </td>
                           <td>
-                            <input type="text"/>
+                            <input type="text" name="{Question}" />
                           </td>
                         </xsl:otherwise>
                       </xsl:choose>
@@ -107,6 +110,7 @@
             </form>
           </div>
         </div>
+         
       </body>
     </html>
   </xsl:template>
