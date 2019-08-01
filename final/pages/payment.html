@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Quote-Payment</title>
+        <link rel="stylesheet" href="../style/style.css">
+    </head>
+    <body style="font-family: HelveticaNeueLTStd-Lt,sans-serif;">
+        <div class="container">
+            <div id="right_logo"></div>
+            <div id="left_logo"></div>
+            <form action="../index.html" method="post" id="quote_form_1">
+                <fieldset>
+                    <legend>
+                        <h3>Dynamic Quote Payment</h3>
+                    </legend>
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="">First Name:</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="text" name="ApplicantFirstName">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="">Last Name:</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="text" name="ApplicantLastName">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="">Customer Email ID</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="email" name="EmailAddress" placeholder="b_owner@biz.com">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="">Customer Phone Number</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="text" name="TelephoneNumber" placeholder="123-456-6712">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="">Name of the Business:</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="text" name="BusinessName">
+                        </div>
+                    </div>
+                    
+                    <br>
+                    <button type="submit" form="quote_form_1" value="Submit" id="mybutton">Generate a new quote</button>
+                </fieldset>
+            </form>
+        </div>
+        <div id="footer"> &copy; copyright api_team 2019</div>
+    </body>
+</html>
