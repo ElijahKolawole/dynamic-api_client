@@ -8,6 +8,9 @@
         <link rel="stylesheet" href="style/style.css"/>
       </head>
       <body style="font-family: HelveticaNeueLTStd-Lt,sans-serif;">
+        <div class="header_bgd">
+    <div id="img_div"></div>
+  </div>
         <div class="container">
           <form action="quoter.html" method="post" id="quote_form_1">
             <fieldset>

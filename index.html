@@ -122,14 +122,23 @@ h2{
 a{
   text-decoration: none
 }
+
+#img_div{
+	 margin-left: 10px;
+  width: 50%;
+  height: 100px;
+ background-image: url("logo.png");
+  background-repeat: no-repeat;
+}
 		
 	</style>
 </head>
 <body>
 	<div class="header_bgd">
-		<h1>--------------</h1>
+		<div id="img_div"></div>
 	</div>
 	<div class="content">
+		
 		<div class="menu">
 			<a href="javascript:void(0)"   data-src='http://placehold.it/100x100' onclick="toggle_visibility('purpose');">Purpose</a>
 			<div id="purpose" class="foo">This is foo</div>

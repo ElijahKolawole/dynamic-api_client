@@ -68,3 +68,11 @@ input[type=submit]:hover {
   }
 
 }
+
+#img_div{
+   margin-left: 10px;
+  width: 50%;
+  height: 100px;
+ background-image: url("logo.png");
+  background-repeat: no-repeat;
+}
